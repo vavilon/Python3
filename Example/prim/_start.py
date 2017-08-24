@@ -2,7 +2,7 @@
 
 from def_ import *
 
-print ("Ok")
+print ("Start OK")
 
 print(hello())
 print(add(1, 10))

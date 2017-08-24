@@ -1,3 +1,5 @@
 # -*- coding: utf-8 -*-
 
-x2 = 2
+print("test2 Ok")
+def helo():
+    print("test2")

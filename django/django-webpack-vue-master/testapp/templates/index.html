@@ -1,0 +1,22 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+  </head>
+
+  <body>
+    <div id="editor">
+  <textarea :value="input" @input="update"></textarea>
+  <div v-html="compiledMarkdown"></div>
+</div>
+    {% if debug %}
+        {% render_bundle 'app' %}
+    {% else %}
+        {% render_bundle 'app' %}
+        {% render_bundle 'manifest' %}
+        {% render_bundle 'vendor' %}
+    {% endif %}
+  </body>
+</html>

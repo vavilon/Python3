@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
 if 5 < 2:
-    print("Ok")
-elif 5>2:
-    print("mayby")
+    print("OK")
+elif 4 < 2:
+    print("ili")
 else:
-    print("else")
-#elif:
-#    print("Ho")
+    print("End")
