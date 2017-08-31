@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from test2 import *
-from test3 import *
-
-#print(x2 + x3)
-helo()
-ifl()
+e =1
+while e < 20:
+    print(e)
+    e = e + 1
+    

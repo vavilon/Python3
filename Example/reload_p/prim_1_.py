@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-import test1
-import time
+
+import prim_1
+
 from imp import reload
 
-reload(test1)
+reload(prim_1)
