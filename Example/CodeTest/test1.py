@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import sqlite3
-conn=sqlite3.connect('xx.db')
+import test3
         
+class t():
+    r = 3
+    w()
+
+t()
