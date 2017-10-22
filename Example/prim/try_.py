@@ -35,8 +35,16 @@ def temp_convert(var):
    except ValueError as Argument:
       print ("The argument does not contain numbers\n", Argument)
 
+def prim_2():
+    try:
+        k = 1/0
+    except ZeroDivisionError:
+        k = 0
+    print(k)
+    
 # Call above function here.
 temp_convert("xyz")
 prim()
 prim_()
 prim_1()
+prim_2()

@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 
-if 5 < 2:
-    print("OK")
-elif 4 < 2:
-    print("ili")
-else:
-    print("End")
+def fis():
+    if 3<1:
+        print(1)
+    elif 6<2:
+        print(2)
+    else:
+        print(3)
+        
+
+fis()

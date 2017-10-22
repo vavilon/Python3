@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
-print("Start")
+media =('medias',('emma','mery'),
+                ('kari', 'nina'),)
 
-for va in "string":
-    if va == "t":
-        continue
-    print(va)
+mark = 'mk'
+junior = 'jn'
+moni = (
+        (mark,'faynd'),
+        (junior, 'Junior'))
+print(media)
+print(moni())

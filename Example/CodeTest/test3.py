@@ -1,26 +1,18 @@
 # -*- coding: utf-8 -*-
 
-def ok():
-    if 4<2:
-        print(1)
-    elif 3<1:
-        print(2)
-    else:
-        print(3)
+class S:
+    def __init__(self, name, cat, n=0):
+        self.name = name
+        self.car = cat
+        #self.nums = n
         
-def cont():
-    for t in "hello":
-        if t == "o":
-            continue
-        print("create",t)
-        
-def w():
-    r = 2
-    while r <5:
-        r = r +1
-        print(r)
-        
-def ky():
-    for i in "Gray":
-        print(i * 2, end='')
-        
+    def jr(self, name, cat, n):
+        if n <=0:
+            self.where = "no"
+        else:
+            self.where = "yes"
+            
+m1 = S("ni", "k", 50)
+            
+#S.jr()
+print(m1.car)

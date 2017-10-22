@@ -1,25 +1,24 @@
 # -*- coding: utf-8 -*-
 
-
-class Building:
-     def __init__(self,w,c,n=0):
-          self.what = w
-          self.color = c
-          self.numbers = n
-          self.mwhere(n)
- 
-     def mwhere(self,n):
-          if n <= 0:
+class Build:
+    def __init__ (self,w,c,n=0):
+        self.what = w
+        self.color = c
+        self.numbers= n
+        self.mwhere(n)
+        
+    def mwhere(self, n):
+        if n <= 0:
                self.where = "отсутствуют"
-          elif 0 < n < 100:
+        elif 0 < n < 100:
                self.where = "малый склад"
-          else:
+        else:
                self.where = "основной склад"
  
-     def plus(self,p):
+    def plus(self,p):
           self.numbers = self.numbers + p
           self.mwhere(self.numbers)
-     def minus(self,m):
+    def minus(self,m):
           self.numbers = self.numbers - m
           self.mwhere(self.numbers)
  
