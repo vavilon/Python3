@@ -14,14 +14,18 @@ from sqlalchemy import inspect
 db_uri = 'sqlite:///db.db'
 #db_uri = 'sqlite:///db.sqlite'
 engine = create_engine(db_uri)
-session.query(User).filter_by(name='ed').all()
+conn = engine.connect()
 
-# query with multiple classes, returns tuples
-session.query(User, Address).join('addresses').filter_by(name='ed').all()
+meta = MetaData(engine, reflect=True)
+user_t = meta.tables['user']
 
-# query using orm-enabled descriptors
-session.query(User.name, User.fullname).all()
+# select * from user_t
+sel_st = user_t.select()
+res = conn.execute(sel_st)
+for _row in res: print (_row)
 
-# query from a mapper
-user_mapper = class_mapper(User)
-session.query(user_mapper)
+# delete l_name == 'Hello'
+del_st = user_t.delete().where(
+      user_t.c.l_name == 'Hello')
+print ('----- delete -----')
+res = conn.execute(del_st)

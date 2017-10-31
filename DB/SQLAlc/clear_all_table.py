@@ -14,14 +14,14 @@ from sqlalchemy import inspect
 db_uri = 'sqlite:///db.db'
 #db_uri = 'sqlite:///db.sqlite'
 engine = create_engine(db_uri)
-session.query(User).filter_by(name='ed').all()
 
-# query with multiple classes, returns tuples
-session.query(User, Address).join('addresses').filter_by(name='ed').all()
+con = engine.connect() 
 
-# query using orm-enabled descriptors
-session.query(User.name, User.fullname).all()
+trans = con.begin() 
 
-# query from a mapper
-user_mapper = class_mapper(User)
-session.query(user_mapper)
+for name, table in meta.tables.items(): 
+
+    print (table.delete() )
+    con.execute(table.delete()) 
+
+trans.commit() 

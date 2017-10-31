@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
-class S:
-    def __init__(self, name, cat, n=0):
-        self.name = name
-        self.car = cat
-        #self.nums = n
+class Base:
+    def __init__(self, arg1 = "argument one"):
+        self.arg1 = arg1
+    
         
-    def jr(self, name, cat, n):
-        if n <=0:
-            self.where = "no"
-        else:
-            self.where = "yes"
-            
-m1 = S("ni", "k", 50)
-            
-#S.jr()
-print(m1.car)
+class Derived(Base):
+    pass
+    
+b = Base()
+print (b.arg1)
+ 
+d = Derived()
+print (d.arg1)
+ 
+e = Derived("argument changed!")
+print (e.arg1)

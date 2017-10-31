@@ -22,9 +22,9 @@ class Build:
           self.numbers = self.numbers - m
           self.mwhere(self.numbers)
  
-m1 = Building("доски", "белые",50)
-m2 = Building("доски", "коричневые", 300)
-m3 = Building("кирпичи","белые")
+m1 = Build("доски", "белые",50)
+m2 = Build("доски", "коричневые", 300)
+m3 = Build("кирпичи","белые")
  
 print (m1.what,m1.color,m1.where)
 print (m2.what,m2.color,m2.where)
