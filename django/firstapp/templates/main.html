@@ -1,0 +1,140 @@
+﻿{% load staticfiles %}
+{% load i18n mptt_tags %}
+
+
+<html>
+<head>
+
+    <title>Kuzma-Kuzin</title>
+ <link rel="stylesheet" type="text/css" href="{% static "static/css/foundation.min.css" %}">
+
+</head>
+<style>
+   body {
+    background: #c7b39b url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzhnHjURIlzc6jsa1LrpjRMShoHY7o-eIBQDSlG2JrUVSw_YVL);
+
+   }
+  </style>
+
+    <style>
+.callout.primary {
+    background-color:#FFE4B5  ;
+}
+</style>
+<style>
+.top-bar, .top-bar ul {
+    background-color:#E9967A;
+}
+</style>
+<style>
+    .callout {
+    background-color:#EEE8AA ;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+    border-radius: 0;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    position: relative;
+}
+</style>
+<body>
+
+<div class="top-bar">
+
+                            <div class="top-bar-left">
+                                       <ul class="menu">
+                                                     <li class="menu-text">Kuzma-Kuzin</li>
+                                         <li>   <form action="/keyword/" method="post">
+                                   {% csrf_token %}
+                                   {{ form_keywords }}
+
+                                   <input type="submit"  value="OK!"style="background:#ff9900;
+                                                              color: #000000;-moz-border-radius:5px;-webkit-border-radius:5px;
+                                                              border-radius:5px;">
+                               </form>
+                                         </li>
+                                       </ul>
+                            </div>
+                              <div class="top-bar-right">
+                                    <ul class="menu">
+                                      <li><a href="/home/">ГЛАВНАЯ</a></li>
+                                        <li><a href="/">БЛОГ</a></li>
+                                       <li><a href="/admin/">АДМИН</a></li>
+                                       <li>{% if username %}
+                                               <a href="/auth/logout/">Выйти ({{ username }})</a>
+                                           {% else %}
+                                               <a href="/auth/login/">Войти</a>
+                                           {% endif %}
+                                       </li>
+                                    </ul>
+                              </div>
+
+</div>
+
+
+                <div class="callout large primary">
+
+                    <div class="row column text-center">
+ <h1><span style="color:#4B0082"><span style="font-family:comic sans ms,cursive">
+     <big><tt><strong>ГОРОДА&nbsp; ДОРОГИ&nbsp; ЛЮДИ</strong></tt></big></span></span>
+ </h1>
+
+
+                    </div>
+
+                </div>
+                              <div class="row" id="content">
+
+                                  <div class="medium-8 columns">
+
+                                                    {% block article %}{% endblock %}
+
+                                                         {% block login %}{% endblock %}
+                                                         {% block content %}{% endblock content %}
+
+
+                                  </div>
+
+                                          <div class="medium-3 columns" data-sticky-container>
+                                               <div class="sticky" data-sticky data-anchor="content">
+                              <ul class="menu simple">
+                                                   <form action="/keyword/" method="post">
+                                   {% csrf_token %}
+                                   {{ form_keywords }}
+
+                                   <input type="submit"  value="OK!"style="background:#ff9900;
+                                                              color: #000000;-moz-border-radius:5px;-webkit-border-radius:5px;
+                                                              border-radius:5px;">
+                               </form>
+                              </ul>
+                                                   <h4>КАТЕГОРИИ</h4>
+                                                      <ul>
+                                                          {% recursetree projects %}
+  <li>
+    <a  href="/category/get/{{ node.id }}/"
+        title="{% blocktrans with project=node %}Show all entries in {{ project }}{% endblocktrans %}">{{ node }}</a>
+    {% if not node.is_leaf_node %}
+    <ul class="project-children project-{{ node.slug }}">
+      {{ children }}
+    </ul>
+    {% endif %}
+  </li>
+  {% endrecursetree %}
+  {% if not projects %}
+  <li>
+    {% trans "No projects yet." %}
+  </li>
+                                                           {% endif %}
+                                                      </ul>
+                                                    <h4>Авторы</h4>
+                                                          <ul>
+{% for author in authors %}
+		    <li><a href="/author/{{ author.id }}">{{ author }}</a></li>
+{% endfor %}
+
+                                                          </ul>
+                                               </div>
+                                          </div>
+                               </div>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% if query %}
+            <h2>Results for "{{ query|escape }}": </h2>
+            {% if results %}
+                <ul>
+                    {% for entry in results %}
+                    <li> {{entry}} </li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p> No entries found</p>
+          {% endif %}
+         {% endif %}

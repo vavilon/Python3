@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load embed_video_tags %}
+
+{% load staticfiles %}
+{% load i18n mptt_tags %}
+
+{% block article %}
+{% for hom in homes %}
+
+
+
+<h4>{{hom.home_title   }}</h4>
+<div>
+{% if hom.home_image %}
+    <p> <img src="{{MEDIA_URL}}{{ hom.home_image.url}}"></p>
+    {% endif %}
+</div>
+<p>{% autoescape off%}{{hom.home_text}}{% endautoescape %}</p>
+{% if hom.video %}
+<iframe width="560" height="315" src="{{hom.video}}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
+{% endfor %}
+{%  endblock %}

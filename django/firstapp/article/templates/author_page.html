@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+    <h2>Автор:   {{author_s.name}}</h2>
+
+    {% if author_s.author_image  %}
+    <p> <img class="thumbnail" src="{{MEDIA_URL}}{{author_s.author_image.url}}"></p>
+{% endif %}
+{% for article in articles %}
+    {% if article.article_image %}
+    <p> <img class="thumbnail" src="{{MEDIA_URL}}{{ article.article_image.url}}"></p>
+{% endif %}
+<ul class="right"><h4> категория: {{ article.category }}</h4></ul>
+<h6>Дата публикации:{{ article.article_date }}</h6>
+    <h4><a href="/articles/get/{{ article.id }}/">{{ article.article_title }}</a></h4>
+         <p>{{ article.article_text_min }}</p>
+
+{% endfor %}
+
+{% endblock content %}

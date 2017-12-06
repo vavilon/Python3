@@ -1,0 +1,43 @@
+﻿{% extends 'main.html' %}
+{% load embed_video_tags %}
+{% block article %}
+{% load mptt_tags %}
+{% load i18n mptt_tags %}
+<ul class="right">Из категории:<a href="/category/get/{{ article.category.id }}/"> {{ article.category }}</a></h4></ul>
+<h4>{{ article.article_date }}</h4>
+<h2>{{ article.article_title }}</h2>
+
+<div>
+{% if article.article_image %}
+    <p> <img src="{{MEDIA_URL}}{{ article.article_image.url}}"></p>
+    {% endif %}
+</div>
+<p>{% autoescape off%}{{ article.article_text }}{% endautoescape %}</p>
+{% if article.video %}
+<iframe width="560" height="315" src="{{article.video}}" frameborder="0" allowfullscreen></iframe>
+    {% endif %}
+<hr>
+
+<div class="large-offset-1 large-8 columns">
+<p>Комментарии:{{n_comments}}</p>
+
+    <div height="1" style="border-bottom: 1px dotted #000033; "></div>
+    {%  for comment in comments %}
+    <p>{{ comment.comments_text }}</p>
+    <p align="right"> {{ comment.comments_author.username}} -{{comment.comments_date}}</p>
+<div height="1" style="border-bottom: 1px dotted #000033; "></div>
+
+    {% endfor %}
+    {% if username %}
+    <form action="/articles/addcomment/{{ article.id }}/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" class="button" value="Добавить комментарий">
+    </form>
+    {% endif %}
+
+ </div>
+
+{%  endblock %}
+
+    
