@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}django-sample{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<ol class="breadcrumb">
+        <li class="breadcrumb-item active">Powered by Django</li>
+    </ol>
+    <div class="jumbotron">
+        <h1 class="display-3">{% block header %}{% endblock %}</h1>
+        <p class="lead">
+            {% block content %} {% endblock %}
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">Home</a>
+            </p>
+    </div>
+</body>
+
+</html>
