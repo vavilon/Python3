@@ -1,4 +1,4 @@
-"""code_test URL Configuration
+"""teka URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from app.views import HomeView
+from apps.views import hello
+from apps.views import HomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', HomeView.as_view()),
+    url(r'^hello/$', hello),
+	url(r'^$', HomeView.as_view()),
 ]

@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
 # Create your views here.
-#from __future__ import unicode_literals
-from django.shortcuts import render
+
+from django.http import HttpResponse
 from django.views.generic import TemplateView
+
+def hello(request):
+    return HttpResponse("hello worls")
+
 class HomeView(TemplateView):
-    template_name = 'index.html'
+	template_name = 'index.html'
