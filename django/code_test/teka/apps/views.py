@@ -10,3 +10,6 @@ def hello(request):
 
 class HomeView(TemplateView):
 	template_name = 'index.html'
+
+class PageView(TemplateView):
+    template_name = 'page.html'
