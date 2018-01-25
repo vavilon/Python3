@@ -16,33 +16,8 @@
 
 	</head>
 	<body>
-	{% block content %}
-		{% for catalog_item in catalog %}
-				<div>
-					<h2><a href="{% url 'catalog_detail' catalog_item.id %}">{{ catalog_item.title}}</a></h2>
-					<div>
-						{{catalog_item.description}}
-					</div>
-				</div>
-		{% endfor %}
-		{% if catalog_list %}
-			<ul>
-			{% for catalog in catalog_list %}
-				<li><a href="/polls/{{ catalog.id }}/">{{ catalog.title }}</a></li>
-				<li><a href="/polls/{{ catalog.id }}/">{{ catalog.title }}</a></li>
-
-
-				<div>
-					{{catalog_item.description}}
-				</div>
-			{% endfor %}
-			</ul>
-		{% else %}
-			<p>No polls are available.</p>
-		{% endif %}
-		<li><a href="/polls/te">a</a></li>
-
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <a class="navbar-brand" href="#">Navbar</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -64,6 +39,24 @@
 			</ul>
 		  </div>
 		</nav>
+	
+	{% block content %}
+		{% for catalog_item in catalog %}
+				<div>
+					<h2><a href="{% url 'catalog_detail' catalog_item.id %}">{{ catalog_item.title}}</a></h2>
+					<div>
+						{{catalog_item.description}}
+					</div>
+				</div>
+		{% endfor %}
+		{% if catalog_list %}
+			
+		{% else %}
+			<p>No polls are available.</p>
+		{% endif %}
+		<li><a href="/polls/te">a</a></li>
+
+				
 
 		<div class="pagination">
 	    <span class="step-links">

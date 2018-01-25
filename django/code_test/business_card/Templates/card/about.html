@@ -1,0 +1,43 @@
+{% extends 'card/base.html' %}
+{% load static %}
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'card/default.css' %}" />
+
+<body>
+  {% block cont_left %}
+  <div>
+
+  </div>
+  <h1></h1>
+  <div class="media">
+  <img class="align-self-center mr-3" src="..." alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Описание</h5>
+    <p>В настоящее время компания является официальным дистрибьютором и представителем
+      более чем 50 популярных мировых брендов.​ Одним из ключевых моментов нашей стратегии является прямое сотрудничество с поставщиками.​
+      Мы поддерживаем длительные взаимовыгодные
+      отношения,​ которые позволяют приобретать широкий ассортимент товара по оптимальным ценам и продвигать новые торговые марки.​
+      Наша задача отслеживать все тенденции автозапчасти на мировом рынке и предлагать нашим клиентам самый широкий ассортимент самых надежных автозапчастей и комплектующих.​
+      Не менее важными являются для нас факторы логистики,​ применение эффективных складских технологий и новации в моделях управления.​
+      Эти факторы позволяют нам доставлять товар своим клиентам максимально быстро и с минимальными издержками.​ Не меньшее внимание уделяется клиентскому сервису.​
+       Действуют и постоянно совершенствуются различные бонусные программы для наших партнеров.​ Мы нацелены на долгосрочное и взаимовыгодное сотрудничество.​
+      Мы занимаемся реализацией автозапчастей оптом и в розницу.</p>
+    <p class="mb-0">02.10.2017</p>
+  </div>
+</div>
+  {% endblock %}
+
+  <div>{% block cont_right %}
+    
+
+  {% endblock %}
+
+</div>
+</body>
+</html>

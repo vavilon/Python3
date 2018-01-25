@@ -1,0 +1,11 @@
+{% extends "card/base.html" %}
+
+<html>
+<body>
+  <p>In {{ hour_offset }} hour(s), it will be {{ next_time }}.</p>
+  {% block tt %}kk{% endblock %}
+  <p>{% block er %}ee{% endblock %}</p>
+  {% block cont_right %}
+  {% endblock %}
+</body>
+</html>

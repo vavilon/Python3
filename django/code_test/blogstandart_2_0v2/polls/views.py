@@ -37,18 +37,6 @@ def index(request):
                }
     return render(request, 'polls/index.html', context)
 
-def listing(request):
-    catalog_list = catalog.objects.all()
-    paginator = Paginator(catalog_list, 2) # Show 25 contacts per page
-
-    page = request.GET.get('page')
-    contacts = paginator.get_page(page)
-    return render(request, 'polls/index.html', {'contacts': contacts})
-
-#def detail(request, catalog_id):
-#    catalog = get_object_or_404(catalog, pk=catalog_id)
-#    return render(request, 'polls/detail.html', {'catalog': catalog})
-
 def catalog_detail(request, catalog_id):
     catalog_item = get_object_or_404(Catalog, pk=catalog_id)
     context = {
