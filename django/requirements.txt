@@ -174,7 +174,7 @@ Iris==2.0
 isort==4.2.15
 itsdangerous==0.24
 jedi==0.11.0
-Jinja2==2.10
+Jinja2==2.11.3
 jmespath==0.9.3
 joblib==0.11
 jsonschema==2.6.0
