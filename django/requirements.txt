@@ -359,7 +359,7 @@ rocket-errbot==1.2.5
 rope==0.10.7
 rope-py3k==0.9.4.post1
 rpy2==2.8.5
-rsa==3.4.2
+rsa==4.1
 Rx==1.6.0
 s3fs==0.0.9
 s3transfer==0.1.11
