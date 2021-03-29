@@ -295,7 +295,7 @@ pyflakes==1.6.0
 pyflux==0.4.14
 pygame==1.9.3
 pygcn==0.1.10
-Pygments==2.2.0
+Pygments==2.7.4
 pygments-markdown-lexer==0.1.0.dev39
 PyGreSQL==5.0.4
 PyInstaller==3.3
