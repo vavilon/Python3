@@ -40,7 +40,7 @@ bokeh==0.12.4
 boost-python==1.63
 boto3==1.4.7
 botocore==1.7.33
-bottle==0.12.13
+bottle==0.12.19
 Bottleneck==1.2.0
 bpython==0.16
 bqplot==0.9.0
