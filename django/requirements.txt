@@ -241,7 +241,7 @@ oct2py==4.0.5
 octave-kernel==0.26.2
 odo==0.5.0
 olefile==0.44
-opencv-python==3.3.0.10
+opencv-python==3.4.7.28
 ordereddict==1.1
 packaging==16.8
 pandas==0.20.3
