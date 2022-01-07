@@ -67,7 +67,7 @@ croniter==0.3.19
 cryptography==2.0.3
 cssselect==1.0.1
 curtsies==0.2.11
-cvxopt==1.1.9
+cvxopt==1.2.7
 cx-Freeze==5.0.2
 cycler==0.10.0
 cyordereddict==1.0.0
