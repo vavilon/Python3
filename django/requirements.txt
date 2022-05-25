@@ -299,7 +299,7 @@ Pygments==2.2.0
 pygments-markdown-lexer==0.1.0.dev39
 PyGreSQL==5.0.4
 PyInstaller==3.3
-PyJWT==1.5.3
+PyJWT==2.4.0
 pylint==1.7.4
 pymc==2.3.6
 pymc3==3.0
