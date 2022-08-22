@@ -234,7 +234,7 @@ Nuitka==0.5.28
 numba==0.31.0
 numdifftools==0.9.20
 numexpr==2.6.2
-numpy==1.13.3+mkl
+numpy==1.22.0
 numpydoc==0.7.0
 oauthlib==2.0.6
 oct2py==4.0.5
