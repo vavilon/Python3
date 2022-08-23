@@ -219,7 +219,7 @@ multipledispatch==0.4.9
 -e git+https://github.com/vavilon/Python3.git@450d44c3838d59bb6086b037a2d0c2c37268daaa#egg=myproject&subdirectory=pyramid\myproject
 mypy==0.501
 mysql-connector-python==2.0.4
-nbconvert==5.3.1
+nbconvert==6.5.1
 nbconvert-reportlab==0.1
 nbdime==0.2.0
 nbformat==4.4.0
