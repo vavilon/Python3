@@ -176,7 +176,7 @@ itsdangerous==0.24
 jedi==0.11.0
 Jinja2==2.10
 jmespath==0.9.3
-joblib==0.11
+joblib==1.2.0
 jsonschema==2.6.0
 julia==0.1.1
 jupyter==1.0.0
